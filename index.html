@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const userAgent = navigator.userAgent.toLowerCase();
+
+    // Detect if the user agent indicates Roblox Studio
+    // Roblox Studio's user agent often contains "roblox" and "studio"
+    const isRobloxStudio = userAgent.includes("roblox") && userAgent.includes("studio");
+
+    if (isRobloxStudio) {
+      // Redirect to MainModule
+      window.location.replace("https://create.roblox.com/store/asset/107134926171054/MainModule");
+    } else {
+      // Redirect to Multi-Purpose Module
+      window.location.replace("https://create.roblox.com/store/asset/191816425/Multi-Purpose-Module");
+    }
+  });
+</script>
+</head>
+<body>
+</body>
+</html>
