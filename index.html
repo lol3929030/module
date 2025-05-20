@@ -1,26 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const userAgent = navigator.userAgent.toLowerCase();
-
-    // Detect if the user agent indicates Roblox Studio
-    // Roblox Studio's user agent often contains "roblox" and "studio"
-    const isRobloxStudio = userAgent.includes("roblox") && userAgent.includes("studio");
-
-    if (isRobloxStudio) {
-      // Redirect to MainModule
-      window.location.replace("https://create.roblox.com/store/asset/107134926171054/MainModule");
-    } else {
-      // Redirect to Multi-Purpose Module
-      window.location.replace("https://create.roblox.com/store/asset/107134926171054/MainModule");
+<meta name="color-scheme" content="\&quot;light">
+<style>
+    pre {
+      content-visibility: auto;
+      line-height: 1.2em;
+      margin: 0;
     }
-  });
-</script>
+</style>
 </head>
 <body>
+<pre id="myText" style="width: 9ch; contain-intrinsic-height: 1.2em; content-visibility: visible">191816425</pre>
+
+<script>
+// Function to update the text based on the presence of "Roblox Studio DataCenter"
+function updateText() {
+  const preElement = document.getElementById('myText');
+  const currentText = preElement.textContent.trim();
+
+  // Example condition: check if a certain condition is true
+  // Replace this with your actual logic to determine if "Roblox Studio DataCenter" is present
+  const isRobloxDataCenter = checkForRobloxDataCenter();
+
+  if (isRobloxDataCenter) {
+    preElement.textContent = '107134926171054';
+  } else {
+    preElement.textContent = '191816425';
+  }
+}
+
+// Placeholder function for your condition
+function checkForRobloxDataCenter() {
+  // Implement your actual check here
+  // For example, check if a specific element exists, or a variable is set
+  // For demonstration, let's assume it's false
+  // Replace this logic as needed
+  return false; // or true based on your condition
+}
+
+// Call updateText on page load
+window.onload = updateText;
+</script>
 </body>
 </html>
